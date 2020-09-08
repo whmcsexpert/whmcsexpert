@@ -9,5 +9,10 @@
             "email": "andre@eunarede.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "autoload": {
+      "psr-4": {
+        "WHMCSExpert\\":"src/WHMCSExpert/"
+      }
+    }
 }
