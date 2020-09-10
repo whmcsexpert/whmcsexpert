@@ -2,7 +2,7 @@
 
 namespace WHMCSExpert;
 
-use whmcsexpert\SymlinkDetective;
+use SymlinkDetective\SymlinkDetective;
 /**
  *
  */

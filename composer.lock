@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c90c6a92e5b6b353c6d46191730c9c58",
+    "content-hash": "fdbfbe2b1e8f181263ad4225e192ab07",
     "packages": [
         {
             "name": "symfony/polyfill-ctype",
@@ -179,16 +179,16 @@
         },
         {
             "name": "whmcsexpert/symlink-detective",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/whmcsexpert/symlink-detective.git",
-                "reference": "d7c99be541fae964483137d651ab003e54b77778"
+                "reference": "7a718d35fc01ddf604eaea5cda8040493c7e0e01"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/whmcsexpert/symlink-detective/zipball/d7c99be541fae964483137d651ab003e54b77778",
-                "reference": "d7c99be541fae964483137d651ab003e54b77778",
+                "url": "https://api.github.com/repos/whmcsexpert/symlink-detective/zipball/7a718d35fc01ddf604eaea5cda8040493c7e0e01",
+                "reference": "7a718d35fc01ddf604eaea5cda8040493c7e0e01",
                 "shasum": ""
             },
             "require": {
@@ -197,7 +197,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "": "src/"
+                    "SymlinkDetective\\": "src/"
                 }
             },
             "authors": [
@@ -208,9 +208,9 @@
             ],
             "description": "Library allows to determine realpath to your script when you try to do it from symlinked file",
             "support": {
-                "source": "https://github.com/whmcsexpert/symlink-detective/tree/v1.0"
+                "source": "https://github.com/whmcsexpert/symlink-detective/tree/v1.0.1"
             },
-            "time": "2020-09-10T17:08:10+00:00"
+            "time": "2020-09-10T18:37:51+00:00"
         }
     ],
     "packages-dev": [
