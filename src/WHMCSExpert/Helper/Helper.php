@@ -2,7 +2,7 @@
 
 namespace WHMCSExpert\Helper;
 
-use WHMCSExpert\Helper\SymlinkDetective;
+// use WHMCSExpert\Helper\SymlinkDetective;
 /**
  *
  */
@@ -50,10 +50,11 @@ class Helper
     return rtrim(ROOTDIR, '/');
   }
 
-  public function getDirectory($file)
+  public function getDirectory()
   {
-    $directory = SymlinkDetective::detectPath(dirname($file));
-    return $directory;
+    // $directory = SymlinkDetective::detectPath(dirname($file));
+    // return $directory;
+    return dirname(\Composer\Factory::getComposerFile());
   }
 
 
