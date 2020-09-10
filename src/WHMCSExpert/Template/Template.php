@@ -27,7 +27,7 @@ class Template
       $this->_smarty->caching        = false;
       $this->_smarty->compile_check  = true;
       $this->_smarty->debugging      = false;
-      $this->_smarty->template_dir   = dirname(__DIR__) . '/templates';
+      // $this->_smarty->template_dir   = dirname(__DIR__) . '/templates';
       $this->_smarty->compile_dir    = $GLOBALS['templates_compiledir'];
       // $this->_smarty->cache_dir      = dirname(dirname(__DIR__)) . '/templates/cache';
 
@@ -49,6 +49,7 @@ class Template
     {
 
       $templateDir = rtrim($dir ? $dir : $this->getTemplatesDir($file), '/');
+      $this->_smarty->template_dir = $templateDir;
 
         if (is_array($vars)) {
             foreach ($vars as $key => $val) {
@@ -69,6 +70,8 @@ class Template
     {
 
       $templateDir = rtrim($dir ? $dir : $this->getTemplatesDir($file), '/');
+      $this->_smarty->template_dir = $templateDir;
+      
 
         if (is_array($vars)) {
             foreach ($vars as $key => $val) {
