@@ -3,6 +3,7 @@
 namespace WHMCSExpert\Helper;
 
 use Webmozart\PathUtil\Path;
+use RuntimeException;
 
 class SymlinkDetective
 {
