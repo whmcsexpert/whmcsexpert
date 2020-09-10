@@ -1,6 +1,6 @@
 <?php
 
-namespace WHMCSExpert\Helper;
+namespace WHMCSExpert;
 
 use SymlinkDetective\SymlinkDetective;
 
