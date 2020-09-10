@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c63c48f5c9d2e5b54e06128f45d0398f",
+    "content-hash": "c90c6a92e5b6b353c6d46191730c9c58",
     "packages": [
         {
             "name": "symfony/polyfill-ctype",
@@ -179,16 +179,16 @@
         },
         {
             "name": "whmcsexpert/symlink-detective",
-            "version": "dev-master",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/whmcsexpert/symlink-detective.git",
-                "reference": "ca69265cb1f21551fd271e64eb03ae0697a6b4cc"
+                "reference": "d7c99be541fae964483137d651ab003e54b77778"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/whmcsexpert/symlink-detective/zipball/ca69265cb1f21551fd271e64eb03ae0697a6b4cc",
-                "reference": "ca69265cb1f21551fd271e64eb03ae0697a6b4cc",
+                "url": "https://api.github.com/repos/whmcsexpert/symlink-detective/zipball/d7c99be541fae964483137d651ab003e54b77778",
+                "reference": "d7c99be541fae964483137d651ab003e54b77778",
                 "shasum": ""
             },
             "require": {
@@ -208,9 +208,9 @@
             ],
             "description": "Library allows to determine realpath to your script when you try to do it from symlinked file",
             "support": {
-                "source": "https://github.com/whmcsexpert/symlink-detective/tree/master"
+                "source": "https://github.com/whmcsexpert/symlink-detective/tree/v1.0"
             },
-            "time": "2020-09-10T02:27:53+00:00"
+            "time": "2020-09-10T17:08:10+00:00"
         }
     ],
     "packages-dev": [
@@ -4646,7 +4646,6 @@
     "aliases": [],
     "minimum-stability": "beta",
     "stability-flags": {
-        "whmcsexpert/symlink-detective": 20,
         "phpunit/phpunit": 0
     },
     "prefer-stable": false,
