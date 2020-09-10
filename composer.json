@@ -11,7 +11,7 @@
     ],
     "minimum-stability": "beta",
     "require": {
-      "whmcsexpert/symlink-detective": "^1.0"
+      "webmozart/path-util": "~2.3"
     },
     "require-dev": {
       "phpunit/phpunit": "@stable",

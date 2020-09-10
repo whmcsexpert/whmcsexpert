@@ -1,8 +1,8 @@
 <?php
 
-namespace WHMCSExpert;
+namespace WHMCSExpert\Helper;
 
-use SymlinkDetective\SymlinkDetective;
+use WHMCSExpert\Helper\SymlinkDetective;
 /**
  *
  */

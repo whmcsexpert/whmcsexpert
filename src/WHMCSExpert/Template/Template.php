@@ -3,7 +3,7 @@
 namespace WHMCSExpert\Template;
 
 use Smarty;
-use WHMCSExpert\Helper;
+use WHMCSExpert\Helper\Helper;
 
 /**
  *
