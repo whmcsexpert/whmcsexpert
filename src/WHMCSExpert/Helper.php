@@ -53,7 +53,8 @@ class Helper
 
   public function getDirectory($file)
   {
-    return SymlinkDetective::detectPath(dirname($file));
+    $directory = SymlinkDetective::detectPath(dirname($file));
+    return $directory;
   }
 
 
