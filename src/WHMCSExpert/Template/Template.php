@@ -19,7 +19,7 @@ class Template
      * Because WHMCS don't allows inject Smarty template we instantiate our won
      * to better build HTML pages.
      */
-    public function __construct()
+    public function __construct($templateDir)
     {
       $this->_helper = new Helper;
 
@@ -27,7 +27,7 @@ class Template
       $this->_smarty->caching        = false;
       $this->_smarty->compile_check  = true;
       $this->_smarty->debugging      = false;
-      // $this->_smarty->template_dir   = dirname(__DIR__) . '/templates';
+      $this->_smarty->template_dir   = $templateDir;
       $this->_smarty->compile_dir    = $GLOBALS['templates_compiledir'];
       // $this->_smarty->cache_dir      = dirname(dirname(__DIR__)) . '/templates/cache';
 
@@ -45,11 +45,11 @@ class Template
      * @param  array  $vars     Any Smarty assing variables to the tpl file
      * @return string the html Smarty data
      */
-    public function fetch($file, $vars = array(), $dir = null)
+    public function fetch($file, $vars = array())
     {
 
-      $templateDir = rtrim($dir ? $dir : $this->getTemplatesDir($file), '/');
-      $this->_smarty->template_dir = $templateDir;
+      // $templateDir = rtrim($dir ? $dir : $this->getTemplatesDir($file), '/');
+      // $this->_smarty->template_dir = $templateDir;
 
         if (is_array($vars)) {
             foreach ($vars as $key => $val) {
@@ -57,7 +57,7 @@ class Template
             }
         }
 
-        return $this->_smarty->fetch("{$templateDir}/{$file}.tpl", uniqid());
+        return $this->_smarty->fetch("{$file}.tpl", uniqid());
     }
 
     /**
@@ -66,12 +66,12 @@ class Template
      * @param  array  $vars     Any Smarty assing variables to the tpl file
      * @return string the html Smarty data
      */
-    public function display($file, $vars = array(), $dir = null)
+    public function display($file, $vars = array())
     {
 
-      $templateDir = rtrim($dir ? $dir : $this->getTemplatesDir($file), '/');
-      $this->_smarty->template_dir = $templateDir;
-      
+      // $templateDir = rtrim($dir ? $dir : $this->getTemplatesDir($file), '/');
+      // $this->_smarty->template_dir = $templateDir;
+
 
         if (is_array($vars)) {
             foreach ($vars as $key => $val) {
@@ -79,7 +79,7 @@ class Template
             }
         }
 
-        return $this->_smarty->display("{$templateDir}/{$file}.tpl", uniqid());
+        return $this->_smarty->display("{$file}.tpl", uniqid());
 
         // return $this->_smarty->display($template.'.tpl', uniqid());
     }
