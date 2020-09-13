@@ -10,9 +10,6 @@
         }
     ],
     "minimum-stability": "beta",
-    "require": {
-      "composer/composer": "^2.0@RC"
-    },
     "require-dev": {
       "phpunit/phpunit": "@stable",
       "phpdocumentor/phpdocumentor": "2.*"
