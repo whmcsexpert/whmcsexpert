@@ -8,7 +8,7 @@ use WHMCSExpert\Helper\Helper;
 /**
  *
  */
-class Template
+class Template extends Smarty_Internal_Resource_File
 {
     /** @var object Smarty object */
     private $_smarty;
@@ -33,6 +33,36 @@ class Template
 
       // return $this->smarty = $smarty;
     }
+
+    /**
+   * Load template's source from file into current template object
+   * with Ioncube for encripty tpl files
+   *
+   * @param  Smarty_Template_Source $source source object
+   * @return string                 template source
+   * @throws SmartyException        if source cannot be loaded
+   */
+  public function getContent(Smarty_Template_Source $source)
+  {
+      if ($source->timestamp) {
+
+          if (file_exists($source->filepath) && function_exists('ioncube_read_file')) {
+              $res = ioncube_read_file($source->filepath);
+              if (is_int($res)) {
+                  $res = false;
+              }
+              return $res;
+          }
+          else {
+              return file_get_contents($source->filepath);
+          }
+      }
+
+      if ($source instanceof Smarty_Config_Source) {
+          throw new SmartyException("Unable to read config {$source->type} '{$source->name}'");
+      }
+      throw new SmartyException("Unable to read template {$source->type} '{$source->name}'");
+  }
 
     public function getTemplatesDir($file)
     {
