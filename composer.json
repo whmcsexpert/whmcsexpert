@@ -14,12 +14,6 @@
       "phpunit/phpunit": "@stable",
       "phpdocumentor/phpdocumentor": "2.*"
     },
-    "repositories":[
-      {
-        "type": "vcs",
-        "url": "https://github.com/whmcsexpert/symlink-detective.git"
-      }
-    ],
     "autoload": {
       "psr-4": {
         "WHMCSExpert\\":"src/WHMCSExpert/"
