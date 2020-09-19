@@ -3,12 +3,15 @@
 namespace WHMCSExpert\Template;
 
 use Smarty;
-use WHMCSExpert\Helper\Helper;
+// use WHMCSExpert\Helper\Helper;
+
+// get the override of Smarty Internal Resource File
+require('../mtLibs/smarty_internal_resource_file.php');
 
 /**
  *
  */
-class Template extends Smarty_Internal_Resource_File
+class Template
 {
     /** @var object Smarty object */
     private $_smarty;
@@ -21,7 +24,7 @@ class Template extends Smarty_Internal_Resource_File
      */
     public function __construct($templateDir)
     {
-      $this->_helper = new Helper;
+      // $this->_helper = new Helper;
 
       $this->_smarty = new Smarty;
       $this->_smarty->caching        = false;
@@ -29,45 +32,16 @@ class Template extends Smarty_Internal_Resource_File
       $this->_smarty->debugging      = false;
       $this->_smarty->template_dir   = $templateDir;
       $this->_smarty->compile_dir    = $GLOBALS['templates_compiledir'];
+      $this->_smart->registerResource('file', new SmartyEncrypt());
       // $this->_smarty->cache_dir      = dirname(dirname(__DIR__)) . '/templates/cache';
 
       // return $this->smarty = $smarty;
     }
 
-    /**
-   * Load template's source from file into current template object
-   * with Ioncube for encripty tpl files
-   *
-   * @param  Smarty_Template_Source $source source object
-   * @return string                 template source
-   * @throws SmartyException        if source cannot be loaded
-   */
-  public function getContent(Smarty_Template_Source $source)
-  {
-      if ($source->timestamp) {
-
-          if (file_exists($source->filepath) && function_exists('ioncube_read_file')) {
-              $res = ioncube_read_file($source->filepath);
-              if (is_int($res)) {
-                  $res = false;
-              }
-              return $res;
-          }
-          else {
-              return file_get_contents($source->filepath);
-          }
-      }
-
-      if ($source instanceof Smarty_Config_Source) {
-          throw new SmartyException("Unable to read config {$source->type} '{$source->name}'");
-      }
-      throw new SmartyException("Unable to read template {$source->type} '{$source->name}'");
-  }
-
-    public function getTemplatesDir($file)
-    {
-      return $this->_helper->getDirectory($file) . "/templates";
-    }
+    // public function getTemplatesDir($file)
+    // {
+    //   return $this->_helper->getDirectory($file) . "/templates";
+    // }
 
     /**
      * Fetch Smarty template
