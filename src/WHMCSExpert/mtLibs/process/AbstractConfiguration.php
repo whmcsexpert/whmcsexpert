@@ -26,6 +26,8 @@ abstract class AbstractConfiguration{
 
     public $storageKey = false;
 
+    public $secretKey = false;
+
     public $modelRegister = array();
 
     private $_customConfigs = array();
