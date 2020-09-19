@@ -1,4 +1,4 @@
 # whmcsexpert
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/whmcsexpert/whmcsexpert/php)
+![GitHub release (latest SemVer)](https://shields.eunarede.com/github/v/release/whmcsexpert/whmcsexpert)
 
 Our base library
