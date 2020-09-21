@@ -101,8 +101,6 @@ abstract class AbstractMainDriver{
                 self::$_instance->_debug = true;
             }
 
-            main\mtLibs\MySQL\Query::useCurrentConnection();
-            main\mtLibs\Lang::getInstance(self::$_instance->_mainDIR.DS.'langs');
         }
 
         return self::$_instance;
