@@ -41,7 +41,7 @@ class Storage
 
     protected $storageKey;
 
-    public function __construct($storagekey)
+    public function __construct(string $storagekey = null)
     {
         $this->storageKey = $storagekey;
         $this->module = $storagekey;
