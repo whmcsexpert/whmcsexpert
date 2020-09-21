@@ -41,10 +41,10 @@ class Storage
 
     protected $storageKey;
 
-    public function __construct()
+    public function __construct($storagekey)
     {
-        $this->storageKey = self::STORAGE_KEY;
-        $this->module = self::SYSTEM_NAME;
+        $this->storageKey = $storagekey;
+        $this->module = $storagekey;
         $this->loadData();
     }
 
