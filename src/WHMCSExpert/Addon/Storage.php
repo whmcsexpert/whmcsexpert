@@ -41,11 +41,11 @@ class Storage
 
     protected $storageKey;
 
-    public function __construct(string $storagekey = null)
+    public function __construct()
     {
-        $this->storageKey = $storagekey;
-        $this->module = $storagekey;
-        $this->loadData();
+        // $this->storageKey = $storagekey;
+        // $this->module = $storagekey;
+        // $this->loadData();
     }
 
     /**
@@ -111,9 +111,9 @@ class Storage
     protected function loadData()
     {
         // Nothing to process
-        if ($this->dataLoaded) {
-            return $this;
-        }
+        // if ($this->dataLoaded) {
+        //     return $this;
+        // }
 
         $data = Capsule::table('tbladdonmodules')->select('setting', 'value')->where('module', $this->getStorageKey())->get();
 
@@ -130,7 +130,7 @@ class Storage
             $this->data[ $key ] = $value;
         }
 
-        // $this->dataLoaded = true;
+        $this->dataLoaded = $this;
 
         return $this;
     }
