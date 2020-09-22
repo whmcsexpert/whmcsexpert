@@ -6,7 +6,7 @@ use Smarty;
 // use WHMCSExpert\Helper\Helper;
 
 // get the override of Smarty Internal Resource File
-require('../mtLibs/smarty_internal_resource_file.php');
+require('mtLibs/smarty_internal_resource_file.php');
 
 /**
  *
