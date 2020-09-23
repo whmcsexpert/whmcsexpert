@@ -41,9 +41,9 @@ class Storage
 
     protected $storageKey;
 
-    public function __construct()
+    public function __construct($key)
     {
-        // $this->storageKey = $storagekey;
+        $this->storageKey = $key;
         // $this->module = $storagekey;
         // $this->loadData();
     }
