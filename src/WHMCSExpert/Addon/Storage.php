@@ -115,7 +115,7 @@ class Storage
         //     return $this;
         // }
 
-        $data = Capsule::table('tbladdonmodules')->select('setting', 'value')->where('module', $this->getStorageKey())->get();
+        $data = Capsule::table('tbladdonmodules')->select('setting', 'value')->where('module', $this->storageKey)->get();
 
         foreach ($data as $row) {
             $key = $row->setting;
@@ -146,7 +146,7 @@ class Storage
         $this->dataUpdate = array_unique($this->dataUpdate);
         $this->dataRemove = array_unique($this->dataRemove);
 
-        $storageKey = $this->getStorageKey();
+        $storageKey = $this->storageKey;
 
         foreach ($this->dataUpdate as $mainKey) {
 
