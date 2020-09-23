@@ -26,7 +26,13 @@ abstract class AbstractConfiguration{
 
     public $storageKey = false;
 
+    public $licenseServerUrl = false;
+
     public $secretKey = false;
+
+    public $localKeyDays = false;
+
+    public $allowCheckFailDays = false;
 
     public $modelRegister = array();
 
