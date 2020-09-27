@@ -3,8 +3,6 @@
 namespace WHMCSExpert\mtLibs;
 use WHMCSExpert as main;
 
-// get the override of Smarty Internal Resource File
-require('smarty_internal_resource_file.php');
 /**
  * Smarty Wrapper
  *

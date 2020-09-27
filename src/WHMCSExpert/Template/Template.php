@@ -5,8 +5,6 @@ namespace WHMCSExpert\Template;
 use Smarty;
 // use WHMCSExpert\Helper\Helper;
 
-// get the override of Smarty Internal Resource File
-require('smarty_internal_resource_file.php');
 
 /**
  *
@@ -32,7 +30,6 @@ class Template
       $this->_smarty->debugging      = false;
       $this->_smarty->template_dir   = $templateDir;
       $this->_smarty->compile_dir    = $GLOBALS['templates_compiledir'];
-      $this->_smart->registerResource('file', new SmartyEncrypt());
       // $this->_smarty->cache_dir      = dirname(dirname(__DIR__)) . '/templates/cache';
 
       // return $this->smarty = $smarty;
