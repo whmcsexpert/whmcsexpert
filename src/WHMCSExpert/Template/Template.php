@@ -58,7 +58,7 @@ class Template
             }
         }
 
-        return $this->_smarty->fetch("{$file}.tpl", uniqid());
+        return $this->_smarty->fetch("{$file}.tpl");
     }
 
     /**
@@ -80,7 +80,7 @@ class Template
             }
         }
 
-        return $this->_smarty->display("{$file}.tpl", uniqid());
+        return $this->_smarty->display("{$file}.tpl");
 
         // return $this->_smarty->display($template.'.tpl', uniqid());
     }

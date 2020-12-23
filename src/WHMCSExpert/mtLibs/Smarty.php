@@ -44,7 +44,7 @@ class Smarty
 
             self::$_instance->_smarty = new \Smarty();
             // register the new Smarty internal resource file
-            self::$_instance->_smarty->registerResource('file', new SmartyEncrypt());
+            // self::$_instance->_smarty->registerResource('file', new SmartyEncrypt());
         }
 
         return self::$_instance;
