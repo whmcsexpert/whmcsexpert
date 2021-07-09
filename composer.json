@@ -1,22 +1,25 @@
 {
-    "name": "whmcsexpert/whmcsexpert",
-    "description": "WHMCS Expert Library",
-    "type": "library",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Andre Bellafronte",
-            "email": "andre@eunarede.com"
-        }
-    ],
-    "minimum-stability": "beta",
-    "require-dev": {
-      "phpunit/phpunit": "@stable",
-      "phpdocumentor/phpdocumentor": "2.*"
-    },
-    "autoload": {
-      "psr-4": {
-        "WHMCSExpert\\":"src/WHMCSExpert/"
-      }
+  "name": "whmcsexpert/whmcsexpert",
+  "description": "WHMCS Expert Library",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Andre Bellafronte",
+      "email": "andre@eunarede.com"
     }
+  ],
+  "config": {
+    "optimize-autoloader": true
+  },
+  "minimum-stability": "beta",
+  "require-dev": {
+    "phpunit/phpunit": "@stable",
+    "phpdocumentor/phpdocumentor": "2.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "WHMCSExpert\\": "src/WHMCSExpert/"
+    }
+  }
 }
