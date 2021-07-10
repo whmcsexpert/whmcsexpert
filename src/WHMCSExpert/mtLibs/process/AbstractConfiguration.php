@@ -5,37 +5,37 @@ namespace WHMCSExpert\mtLibs\process;
 
 abstract class AbstractConfiguration{
 
-    public bool $debug = false;
+    public $debug = false;
 
-    public string $systemName;
+    public $systemName;
 
-    public string $name;
+    public $name;
 
-    public string $moduleName;
+    public $moduleName;
 
-    public string $description;
+    public $description;
 
-    public string $clientAreaName;
+    public $clientAreaName;
 
-    private string $encryptHash;
+    private $encryptHash;
 
-    public string $version;
+    public $version;
 
-    public string $author = '<a href="https://www.mimirtech.co" target="_blank">MimirTech</a>';
+    public $author = '<a href="https://www.mimirtech.co" target="_blank">MimirTech</a>';
 
-    private string $tablePrefix;
+    private $tablePrefix;
 
-    private string $storageKey;
+    private $storageKey;
 
-    private string $licenseServerUrl;
+    private $licenseServerUrl;
 
-    private string $secretKey;
+    private $secretKey;
 
-    private int $localKeyDays;
+    private $localKeyDays;
 
-    public int $allowCheckFailDays;
+    public $allowCheckFailDays;
 
-    public array $modelRegister;
+    public $modelRegister;
 
     private $_customConfigs = array();
 
