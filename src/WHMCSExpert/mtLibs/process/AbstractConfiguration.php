@@ -1,7 +1,7 @@
 <?php
 
 namespace WHMCSExpert\mtLibs\process;
-use WHMCSExpert as main;
+
 
 abstract class AbstractConfiguration{
     public $debug = false;
@@ -16,19 +16,19 @@ abstract class AbstractConfiguration{
 
     public $clientareaName = false;
 
-    public $encryptHash = false;
+    private $encryptHash = false;
 
     public $version = false;
 
-    public $author = '<a href="https://www.mimirtech.co" targer="_blank">MimirTech</a>';
+    public $author = '<a href="https://www.mimirtech.co" target="_blank">MimirTech</a>';
 
     public $tablePrefix = false;
 
-    public $storageKey = false;
+    private $storageKey = false;
 
     public $licenseServerUrl = false;
 
-    public $secretKey = false;
+    private $secretKey = false;
 
     public $localKeyDays = false;
 

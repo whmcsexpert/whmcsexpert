@@ -15,7 +15,7 @@ abstract class AbstractMainDriver{
     /**
      * Single Ton Instance
      *
-     * @var mainController
+     *
      */
     static private $_instance;
 
@@ -36,7 +36,7 @@ abstract class AbstractMainDriver{
     /**
      * Load Configuration
      *
-     * @var Configuration
+     *
      */
     private $_configuration;
 
@@ -62,12 +62,6 @@ abstract class AbstractMainDriver{
     private $_mainNamespace;
 
     private $_mainDIR;
-
-    /**
-     * Disable Contruct && Clone
-     */
-    private final function __construct() {;}
-    private final function __clone() {;}
 
     /**
      * Get SingleTon Instance
