@@ -43,9 +43,8 @@ class Storage
 
     public function __construct($key)
     {
-        $this->storageKey = $key;
-        // $this->module = $storagekey;
-        // $this->loadData();
+        $this->setStorageKey($key);
+        $this->loadData();
     }
 
     /**
@@ -56,7 +55,7 @@ class Storage
      */
     public function get($key, $default = null)
     {
-        $this->loadData();
+        //$this->loadData();
 
         return Arr::get($this->data, $key);
     }
@@ -86,7 +85,7 @@ class Storage
      */
     public function has($key)
     {
-        $this->loadData();
+        //$this->loadData();
 
         return Arr::has($this->data, $key);
     }
@@ -111,11 +110,11 @@ class Storage
     protected function loadData()
     {
         // Nothing to process
-        // if ($this->dataLoaded) {
-        //     return $this;
-        // }
+        if ($this->dataLoaded) {
+             return $this;
+        }
 
-        $data = Capsule::table('tbladdonmodules')->select('setting', 'value')->where('module', $this->storageKey)->get();
+        $data = Capsule::table('tbladdonmodules')->select('setting', 'value')->where('module', $this->getStorageKey())->get();
 
         foreach ($data as $row) {
             $key = $row->setting;
@@ -146,7 +145,7 @@ class Storage
         $this->dataUpdate = array_unique($this->dataUpdate);
         $this->dataRemove = array_unique($this->dataRemove);
 
-        $storageKey = $this->storageKey;
+        $storageKey = $this->getStorageKey();
 
         foreach ($this->dataUpdate as $mainKey) {
 
