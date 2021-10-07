@@ -168,6 +168,14 @@ abstract class AbstractConfiguration{
     }
 
     /**
+     * @param string $author
+     */
+    public function setAuthor($author)
+    {
+        $this->author = $author;
+    }
+
+    /**
      * @return string
      */
     public function getAuthor(): string
