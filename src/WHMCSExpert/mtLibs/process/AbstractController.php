@@ -6,7 +6,6 @@ use WHMCSExpert as main;
 /**
  * Description of abstractController
  *
- * @author Michal Czech <michael@modulesgarden.com>
  * @SuppressWarnings(PHPMD)
  */
 abstract class AbstractController {

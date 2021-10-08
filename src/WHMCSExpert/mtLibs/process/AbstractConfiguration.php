@@ -7,37 +7,52 @@ abstract class AbstractConfiguration{
 
     public $debug = false;
 
-    public $systemName;
+    public $systemName = false;
 
-    public $name;
+    public $name = false;
 
-    public $moduleName;
+    public $moduleName = false;
 
-    public $description;
+    public $description = false;
 
-    public $clientAreaName;
+    public $clientAreaName = false;
 
-    private $encryptHash;
+    private $encryptHash = false;
 
-    public $version;
+    public $version = false;
 
-    public $author = '<a href="https://www.mimirtech.co" target="_blank">MimirTech</a>';
+    public $author = false;
 
-    private $tablePrefix;
+    public $tablePrefix = false;
 
-    private $storageKey;
+    public $storageKey = false;
 
-    private $licenseServerUrl;
+    private $licenseServerUrl = false;
 
-    private $secretKey;
+    private $secretKey = false;
 
-    private $localKeyDays;
+    private $localKeyDays = false;
 
-    public $allowCheckFailDays;
+    public $allowCheckFailDays = false;
 
-    public $modelRegister;
+    public $modelRegister = array();
 
     private $_customConfigs = array();
+
+    public function __isset($name) {
+        return isset($this->_customConfigs[$name]);
+    }
+
+    public function __get($name) {
+        if(isset($this->_customConfigs[$name]))
+        {
+            return $this->_customConfigs[$name];
+        }
+    }
+
+    public function __set($name, $value) {
+        $this->_customConfigs[$name] = $value;
+    }
 
     /**
      * @param bool $debug
@@ -293,21 +308,6 @@ abstract class AbstractConfiguration{
     public function getModelRegister(): array
     {
         return $this->modelRegister;
-    }
-
-    public function __isset($name) {
-        return isset($this->_customConfigs[$name]);
-    }
-
-    public function __get($name) {
-        if(isset($this->_customConfigs[$name]))
-        {
-            return $this->_customConfigs[$name];
-        }
-    }
-
-    public function __set($name, $value) {
-        $this->_customConfigs[$name] = $value;
     }
 
     public function getAddonMenu(){
