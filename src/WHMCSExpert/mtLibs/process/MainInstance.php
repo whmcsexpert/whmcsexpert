@@ -6,7 +6,6 @@ use WHMCSExpert as main;
 /**
  * Description of mainController
  *
- * @author Michal Czech <michael@modulesgarden.com>
  * @SuppressWarnings(PHPMD)
  */
 class MainInstance {

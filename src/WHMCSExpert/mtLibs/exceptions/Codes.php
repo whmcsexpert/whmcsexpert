@@ -7,7 +7,6 @@ use WHMCSExpert as main;
  * Exception Codes
  *
  * @todo extends number of supported codes
- * @author Michal Czech <michael@modulesgarden.com>
  */
 class Codes {
     const MISING_FILE_CLASS                         = 1;

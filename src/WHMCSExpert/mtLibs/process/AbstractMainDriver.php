@@ -8,7 +8,6 @@ use WHMCSExpert\mtLibs;
 /**
  * Main Abstract Controller
  *
- * @author Michal Czech <michael@modulesgarden.com>
  * @SuppressWarnings(PHPMD)
  */
 abstract class AbstractMainDriver{
@@ -64,6 +63,12 @@ abstract class AbstractMainDriver{
     private $_mainDIR;
 
     /**
+     * Disable Contruct && Clone
+     */
+    private final function __construct() {;}
+    private final function __clone() {;}
+
+    /**
      * Get SingleTon Instance
      *
      * @return AbstractMainDriver
@@ -76,8 +81,8 @@ abstract class AbstractMainDriver{
             MainInstance::setInstanceName($class);
 
             self::$_instance = new $class();
-            // self::$_instance->_mainNamespace = substr(__NAMESPACE__,0,  strpos(__NAMESPACE__, '\mtLibs'));
-            self::$_instance->_mainNamespace = (new \ReflectionClass($class))->getNamespaceName();
+            self::$_instance->_mainNamespace = substr(__NAMESPACE__,0,  strpos(__NAMESPACE__, '\mtLibs'));
+            //self::$_instance->_mainNamespace = (new \ReflectionClass($class))->getNamespaceName();
             self::$_instance->_mainDIR = call_user_func(array($class,'getMainDIR'));
 
             $class= self::$_instance->_mainNamespace.'\Configuration';
@@ -95,6 +100,8 @@ abstract class AbstractMainDriver{
             {
                 self::$_instance->_debug = true;
             }
+
+            main\mtLibs\MySQL\Query::useCurrentConnection();
 
         }
 
