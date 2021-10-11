@@ -2,7 +2,7 @@
 
 namespace WHMCSExpert\Addon;
 
-use WHMCS\Database\Capsule;
+use Illuminate\Database\Capsule\Manager as Capsule;
 use Illuminate\Support\Arr;
 
 class Storage
@@ -49,15 +49,22 @@ class Storage
 
     /**
      * Get data by key (can be path divided by dots - `.`)
-     * @param $key
+     * @param null $key
      * @param null $default
      * @return mixed
      */
-    public function get($key, $default = null)
+    public function get($key = null, $default = null)
     {
-        //$this->loadData();
+        if (is_null($key)) {
 
-        return Arr::get($this->data, $key);
+            return $this->loadData();
+
+        } else {
+
+            return Arr::get($this->data, $key);
+
+        }
+
     }
 
     /**
