@@ -2,7 +2,7 @@
 
 namespace WHMCSExpert\Gateway;
 
-use WHMCS\Database\Capsule;
+use Illuminate\Database\Capsule\Manager as Capsule;
 use Illuminate\Support\Arr;
 
 class GatewayStorage extends Fo

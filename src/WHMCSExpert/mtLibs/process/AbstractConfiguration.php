@@ -209,7 +209,7 @@ abstract class AbstractConfiguration{
     /**
      * @return string
      */
-    public function getTablePrefix(): string
+    public function getTablePrefix()
     {
         return $this->tablePrefix;
     }
@@ -217,7 +217,7 @@ abstract class AbstractConfiguration{
     /**
      * @param string $storageKey
      */
-    public function setStorageKey(string $storageKey): void
+    public function setStorageKey(string $storageKey)
     {
         $this->storageKey = $storageKey;
     }
@@ -225,7 +225,7 @@ abstract class AbstractConfiguration{
     /**
      * @return string
      */
-    public function getStorageKey(): string
+    public function getStorageKey()
     {
         return $this->storageKey;
     }
@@ -241,7 +241,7 @@ abstract class AbstractConfiguration{
     /**
      * @return string
      */
-    public function getLicenseServerUrl(): string
+    public function getLicenseServerUrl()
     {
         return $this->licenseServerUrl;
     }
@@ -249,7 +249,7 @@ abstract class AbstractConfiguration{
     /**
      * @param string $secretKey
      */
-    public function setSecretKey(string $secretKey): void
+    public function setSecretKey(string $secretKey)
     {
         $this->secretKey = $secretKey;
     }
@@ -257,7 +257,7 @@ abstract class AbstractConfiguration{
     /**
      * @return string
      */
-    public function getSecretKey(): string
+    public function getSecretKey()
     {
         return $this->secretKey;
     }
@@ -265,7 +265,7 @@ abstract class AbstractConfiguration{
     /**
      * @param int $localKeyDays
      */
-    public function setLocalKeyDays(int $localKeyDays): void
+    public function setLocalKeyDays(int $localKeyDays)
     {
         $this->localKeyDays = $localKeyDays;
     }
@@ -273,7 +273,7 @@ abstract class AbstractConfiguration{
     /**
      * @return int
      */
-    public function getLocalKeyDays(): int
+    public function getLocalKeyDays()
     {
         return $this->localKeyDays;
     }
@@ -281,7 +281,7 @@ abstract class AbstractConfiguration{
     /**
      * @param int $allowCheckFailDays
      */
-    public function setAllowCheckFailDays( int $allowCheckFailDays): void
+    public function setAllowCheckFailDays( int $allowCheckFailDays)
     {
         $this->allowCheckFailDays = $allowCheckFailDays;
     }
@@ -289,7 +289,7 @@ abstract class AbstractConfiguration{
     /**
      * @return int
      */
-    public function getAllowCheckFailDays(): int
+    public function getAllowCheckFailDays()
     {
         return $this->allowCheckFailDays;
     }
@@ -297,7 +297,7 @@ abstract class AbstractConfiguration{
     /**
      * @param array $modelRegister
      */
-    public function setModelRegister(array $modelRegister): void
+    public function setModelRegister(array $modelRegister)
     {
         $this->modelRegister = $modelRegister;
     }
@@ -305,7 +305,7 @@ abstract class AbstractConfiguration{
     /**
      * @return array
      */
-    public function getModelRegister(): array
+    public function getModelRegister()
     {
         return $this->modelRegister;
     }
