@@ -13,9 +13,13 @@
     "optimize-autoloader": true
   },
   "minimum-stability": "beta",
+  "require": {
+    "illuminate/support": "^v8"
+  },
   "require-dev": {
     "phpunit/phpunit": "@stable",
-    "phpdocumentor/phpdocumentor": "2.*"
+    "phpdocumentor/phpdocumentor": "2.*",
+    "illuminate/database": "v5.8.36"
   },
   "autoload": {
     "psr-4": {

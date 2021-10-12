@@ -2,7 +2,7 @@
 
 namespace WHMCSExpert\mtLibs\process;
 
-use WHMCSExpert as main;
+use \WHMCSExpert as main;
 use WHMCSExpert\mtLibs;
 
 /**

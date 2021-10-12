@@ -1,7 +1,7 @@
 <?php
 
 namespace WHMCSExpert\mtLibs\process;
-use WHMCSExpert as main;
+use \WHMCSExpert as main;
 
 /**
  * Description of mainController

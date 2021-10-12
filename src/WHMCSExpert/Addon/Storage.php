@@ -5,7 +5,7 @@ namespace WHMCSExpert\Addon;
 use Illuminate\Database\Capsule\Manager as Capsule;
 use Illuminate\Support\Arr;
 
-class Storage
+abstract class Storage
 {
 
     /**
