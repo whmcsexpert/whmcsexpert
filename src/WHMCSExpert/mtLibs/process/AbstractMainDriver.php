@@ -81,8 +81,8 @@ abstract class AbstractMainDriver{
             MainInstance::setInstanceName($class);
 
             self::$_instance = new $class();
-            self::$_instance->_mainNamespace = substr(__NAMESPACE__,0,  strpos(__NAMESPACE__, '\mtLibs'));
-            //self::$_instance->_mainNamespace = (new \ReflectionClass($class))->getNamespaceName();
+            //self::$_instance->_mainNamespace = substr(__NAMESPACE__,0,  strpos(__NAMESPACE__, '\mtLibs'));
+            self::$_instance->_mainNamespace = (new \ReflectionClass($class))->getNamespaceName();
             self::$_instance->_mainDIR = call_user_func(array($class,'getMainDIR'));
 
             $class= self::$_instance->_mainNamespace.'\Configuration';
