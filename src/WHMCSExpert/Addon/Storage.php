@@ -48,7 +48,7 @@ class Storage
     }
 
     /**
-     * Get data by key (can be path divided by dots - `.`)
+     * Get data by key (can be path divided by dots - `.`) or return all if no key present.
      * @param null $key
      * @param null $default
      * @return mixed
@@ -57,7 +57,7 @@ class Storage
     {
         if (is_null($key)) {
 
-            return $this->loadData();
+            return $this->data;
 
         } else {
 
