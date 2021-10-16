@@ -76,7 +76,7 @@ abstract class Repository
     }
 
     function count(){
-        $fields = $this->fieldDeclaration();
+        $fields = self::fieldDeclaration();
         $first = key($fields);
 
         if(is_numeric($first))
