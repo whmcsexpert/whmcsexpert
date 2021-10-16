@@ -217,7 +217,7 @@ class Orm extends Base
         }
 
         if ($errors) {
-            throw new main\mtLibs\exceptions\validation('validateError', $errors);
+            throw new main\mtLibs\exceptions\Validation('validateError', $errors);
         }
     }
 

@@ -7,7 +7,7 @@ namespace WHMCSExpert\mtLibs\exceptions;
  * Used in Error Handler
  *
  */
-class syntaxError extends System {
+class SyntaxError extends System {
     private $_type;
     private $_line;
     private $_file;
