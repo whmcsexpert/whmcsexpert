@@ -45,7 +45,7 @@ class Query{
      * @param string $dbname
      * @param string $connectionName
      * @return main\mtLibs\MySQL\Query
-     * @throws main\exception\System
+     * @throws main\mtLibs\exceptions\System
      */
     public static function I()
     {
