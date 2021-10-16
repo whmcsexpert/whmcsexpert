@@ -76,7 +76,7 @@ abstract class Repository
     }
 
     function count(){
-        $fields = self::fieldDeclaration();
+        $fields = $this->fieldDeclaration();
         $first = key($fields);
 
         if(is_numeric($first))
@@ -85,7 +85,7 @@ abstract class Repository
         }
         return main\mtLibs\MySQL\Query::count(
             $first
-            , self::tableName()
+            , $this->tableName()
             , $this->_filters
             , array()
             , $this->_limit
