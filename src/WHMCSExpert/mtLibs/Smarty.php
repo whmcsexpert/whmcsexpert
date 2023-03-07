@@ -15,10 +15,10 @@ class Smarty
     private $_smarty;
     private $_templateDIR;
 
-    final private function __construct()
+    final function __construct()
     {
     }
-    final private function __clone()
+    final function __clone()
     {
     }
 
