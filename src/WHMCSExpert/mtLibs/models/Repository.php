@@ -100,13 +100,6 @@ abstract class Repository
         );
     }
 
-    function delete()
-    {
-        return main\mtLibs\MySQL\Query::delete(
-            self::tableName(),
-            $this->_filters
-        );
-    }
 
     /**
      *
