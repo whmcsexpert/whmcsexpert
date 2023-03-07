@@ -1,18 +1,10 @@
 name: PHP Compatibility
+
 on:
-  #   # will run for every branch, except tags. See RSRMID-206.
-  #   push:
-  #     # Sequence of patterns matched against refs/heads
-  #     branches:
-  #       - "**"
-  #     # Sequence of patterns matched against refs/tags
-  #     tags-ignore:
-  #       - "**"
+  push:
+    branches: '*'
   pull_request:
-    branches:
-      - "*"
-    tags-ignore:
-      - "**"
+    branches: '*'
 
 jobs:
   test:
