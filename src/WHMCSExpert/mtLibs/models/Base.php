@@ -87,35 +87,6 @@ abstract class Base
         }
     }
 
-    /**
-     * Encrypt String using Hash from configration
-     *
-     * @param string $input
-     * @return string
-     */
-    function encrypt($input)
-    {
-        if (empty($input)) {
-            return false;
-        }
-
-        return base64_encode(mcrypt_encrypt(MCRYPT_RIJNDAEL_256, main\mtLibs\process\MainInstance::I()->getEncryptKey(), $input, MCRYPT_MODE_ECB));
-    }
-
-    /**
-     * Decrypt String using Hash from configration
-     *
-     * @param string $input
-     * @return string
-     */
-    function decrypt($input)
-    {
-        if (empty($input)) {
-            return false;
-        }
-
-        return trim(mcrypt_decrypt(MCRYPT_RIJNDAEL_256, main\mtLibs\process\MainInstance::I()->getEncryptKey(), base64_decode($input), MCRYPT_MODE_ECB));
-    }
 
     function serialize($input)
     {
