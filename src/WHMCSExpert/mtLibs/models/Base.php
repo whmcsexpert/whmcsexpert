@@ -64,7 +64,8 @@ abstract class Base
 
         $fields = get_class_vars($className);
 
-        foreach (explode('\\', $className) as $className) ;
+        foreach (explode('\\', $className) as $className) {
+        }
 
         $data = array();
 
