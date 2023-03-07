@@ -2,17 +2,17 @@
 
 namespace WHMCSExpert\mtLibs\exceptions;
 
-
 /**
  * Used in Error Handler
  *
- * @author Michal Czech <michael@modulesgarden.com>
  */
-class syntaxError extends System {
+class SyntaxError extends System
+{
     private $_type;
     private $_line;
     private $_file;
-    public function __construct($message, $type, $code, $line, $file) {
+    public function __construct($message, $type, $code, $line, $file)
+    {
         $this->_type = $type;
         $this->_code = $code;
         $this->_line = $line;

@@ -1,15 +1,16 @@
 <?php
 
 namespace WHMCSExpert\mtLibs\exceptions;
+
 use WHMCSExpert as main;
 
 /**
  * Exception Codes
  *
  * @todo extends number of supported codes
- * @author Michal Czech <michael@modulesgarden.com>
  */
-class Codes {
+class Codes
+{
     const MISING_FILE_CLASS                         = 1;
     const PROPERTY_NOT_EXISTS                       = 2;
     const MISING_OBJECT_PROPERTY                    = 3;

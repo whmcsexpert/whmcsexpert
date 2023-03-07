@@ -2,42 +2,58 @@
 
 namespace WHMCSExpert\mtLibs\process;
 
-
-abstract class AbstractConfiguration{
-
+abstract class AbstractConfiguration
+{
     public $debug = false;
 
-    public $systemName;
+    public $systemName = false;
 
-    public $name;
+    public $name = false;
 
-    public $moduleName;
+    public $moduleName = false;
 
-    public $description;
+    public $description = false;
 
-    public $clientAreaName;
+    public $clientAreaName = false;
 
-    private $encryptHash;
+    private $encryptHash = false;
 
-    public $version;
+    public $version = false;
 
-    public $author = '<a href="https://www.mimirtech.co" target="_blank">MimirTech</a>';
+    public $author = false;
 
-    private $tablePrefix;
+    public $tablePrefix = false;
 
-    private $storageKey;
+    public $storageKey = false;
 
-    private $licenseServerUrl;
+    private $licenseServerUrl = false;
 
-    private $secretKey;
+    private $secretKey = false;
 
-    private $localKeyDays;
+    private $localKeyDays = false;
 
-    public $allowCheckFailDays;
+    public $allowCheckFailDays = false;
 
-    public $modelRegister;
+    public $modelRegister = array();
 
     private $_customConfigs = array();
+
+    public function __isset($name)
+    {
+        return isset($this->_customConfigs[$name]);
+    }
+
+    public function __get($name)
+    {
+        if (isset($this->_customConfigs[$name])) {
+            return $this->_customConfigs[$name];
+        }
+    }
+
+    public function __set($name, $value)
+    {
+        $this->_customConfigs[$name] = $value;
+    }
 
     /**
      * @param bool $debug
@@ -194,7 +210,7 @@ abstract class AbstractConfiguration{
     /**
      * @return string
      */
-    public function getTablePrefix(): string
+    public function getTablePrefix()
     {
         return $this->tablePrefix;
     }
@@ -202,7 +218,7 @@ abstract class AbstractConfiguration{
     /**
      * @param string $storageKey
      */
-    public function setStorageKey(string $storageKey): void
+    public function setStorageKey(string $storageKey)
     {
         $this->storageKey = $storageKey;
     }
@@ -210,7 +226,7 @@ abstract class AbstractConfiguration{
     /**
      * @return string
      */
-    public function getStorageKey(): string
+    public function getStorageKey()
     {
         return $this->storageKey;
     }
@@ -226,7 +242,7 @@ abstract class AbstractConfiguration{
     /**
      * @return string
      */
-    public function getLicenseServerUrl(): string
+    public function getLicenseServerUrl()
     {
         return $this->licenseServerUrl;
     }
@@ -234,7 +250,7 @@ abstract class AbstractConfiguration{
     /**
      * @param string $secretKey
      */
-    public function setSecretKey(string $secretKey): void
+    public function setSecretKey(string $secretKey)
     {
         $this->secretKey = $secretKey;
     }
@@ -242,7 +258,7 @@ abstract class AbstractConfiguration{
     /**
      * @return string
      */
-    public function getSecretKey(): string
+    public function getSecretKey()
     {
         return $this->secretKey;
     }
@@ -250,7 +266,7 @@ abstract class AbstractConfiguration{
     /**
      * @param int $localKeyDays
      */
-    public function setLocalKeyDays(int $localKeyDays): void
+    public function setLocalKeyDays(int $localKeyDays)
     {
         $this->localKeyDays = $localKeyDays;
     }
@@ -258,7 +274,7 @@ abstract class AbstractConfiguration{
     /**
      * @return int
      */
-    public function getLocalKeyDays(): int
+    public function getLocalKeyDays()
     {
         return $this->localKeyDays;
     }
@@ -266,7 +282,7 @@ abstract class AbstractConfiguration{
     /**
      * @param int $allowCheckFailDays
      */
-    public function setAllowCheckFailDays( int $allowCheckFailDays): void
+    public function setAllowCheckFailDays(int $allowCheckFailDays)
     {
         $this->allowCheckFailDays = $allowCheckFailDays;
     }
@@ -274,7 +290,7 @@ abstract class AbstractConfiguration{
     /**
      * @return int
      */
-    public function getAllowCheckFailDays(): int
+    public function getAllowCheckFailDays()
     {
         return $this->allowCheckFailDays;
     }
@@ -282,7 +298,7 @@ abstract class AbstractConfiguration{
     /**
      * @param array $modelRegister
      */
-    public function setModelRegister(array $modelRegister): void
+    public function setModelRegister(array $modelRegister)
     {
         $this->modelRegister = $modelRegister;
     }
@@ -290,51 +306,43 @@ abstract class AbstractConfiguration{
     /**
      * @return array
      */
-    public function getModelRegister(): array
+    public function getModelRegister()
     {
         return $this->modelRegister;
     }
 
-    public function __isset($name) {
-        return isset($this->_customConfigs[$name]);
-    }
-
-    public function __get($name) {
-        if(isset($this->_customConfigs[$name]))
-        {
-            return $this->_customConfigs[$name];
-        }
-    }
-
-    public function __set($name, $value) {
-        $this->_customConfigs[$name] = $value;
-    }
-
-    public function getAddonMenu(){
+    public function getAddonMenu()
+    {
         return array();
     }
 
-    public function getAddonWHMCSConfig(){
+    public function getAddonWHMCSConfig()
+    {
         return array();
     }
 
-    public function getServerConfigController(){
+    public function getServerConfigController()
+    {
         return 'configuration';
     }
 
-    public function getServerActionsController(){
+    public function getServerActionsController()
+    {
         return 'actions';
     }
 
-    public function getServerCAController(){
+    public function getServerCAController()
+    {
         return 'home';
     }
 
-    public function getAddonAdminController(){
+    public function getAddonAdminController()
+    {
         return 'actions';
     }
 
-    public function getAddonCAController(){
+    public function getAddonCAController()
+    {
         return 'home';
     }
 }
